@@ -1,0 +1,14 @@
+{
+    "type": "sqlite",
+    "host": "localhost",
+    "port": 3306,
+    "username": "admin",
+    "password": "root",
+    "database": "./src/database/database.sqlite",
+    "migrations": [
+        "./src/database/migrations/**.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
+}
