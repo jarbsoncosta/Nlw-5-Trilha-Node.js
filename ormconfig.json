@@ -1,12 +1,8 @@
 {
     "type": "sqlite",
-    "host": "localhost",
-    "port": 3306,
-    "username": "admin",
-    "password": "root",
     "database": "./src/database/database.sqlite",
     "entities": [
-        "/src/entities/**.ts"
+        "./src/entities/**.ts"
     ],
     "migrations": [
         "./src/database/migrations/**.ts"

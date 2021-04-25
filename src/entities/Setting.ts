@@ -4,13 +4,17 @@ import { Entity, Column, PrimaryColumn, UpdateDateColumn, CreateDateColumn } fro
 @Entity("settings")
 class Setting {
     @PrimaryColumn()
-    id?: string;
+    id: string;
+   
     @Column()
     username: string;
-     @Column()
-     chat: boolean;
+    
+    @Column()
+    chat: boolean;
+
     @UpdateDateColumn()
     updated_at: Date;
+    
     @CreateDateColumn()
     created_at: Date;
 
