@@ -5,7 +5,7 @@ import { SettingsServices } from '../services/SettingsServices'
 
 
 class SettingsController {
-    async create(request: Request, response: Response){
+    async create(request: Request, response: Response):Promise<Response>{
         const {username, chat} = request.body
         const createSettings = new SettingsServices()
 
@@ -19,9 +19,7 @@ class SettingsController {
         } catch(err){
             return response.status(400).json({message:err.message})
           
-      }
-
-        
+      }       
        
    }
     

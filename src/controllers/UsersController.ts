@@ -5,12 +5,12 @@ import { UserServices } from "../services/UsersServices"
 
 
 class UsersController {
-    async create(request: Request, response: Response) {
+    async create(request: Request, response: Response):Promise<Response> {
         const { email } = request.body
 
         const usersServices = new UserServices()
         try {
-            const user = await usersServices.execute({ email })
+            const user = await usersServices.execute(email)
         
             return response.json({user})
             
